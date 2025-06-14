@@ -1,8 +1,7 @@
-# RAGADD
-Retrieval augmented generation (RAG) for question answering about ADD/ADHD medication
+# RAGADD: Retrieval augmented generation (RAG) for question answering about ADD/ADHD medication
 -------------
 
-This project evaluates the performance of Retrieval-Augmented Generation (RAG) for answering questions about ADHD medications based on patient-written drug reviews. The aim is to compare different embedding models and generation strategies against a strong ground-truth baseline using GPT-4o with full document access.
+This project evaluates the performance of Retrieval-Augmented Generation (RAG) for answering questions about ADHD medications based on patient-written drug reviews. The aim is to compare different embedding models and generation strategies against a strong ground-truth baseline using GPT-4o with full document access (n=4,509).
 
 ## Overview
 
@@ -13,47 +12,48 @@ We use the `drugscom_reviews` dataset to extract and preprocess reviews related 
 ### 1. Prepare Dataset
 
 - Extracted ADHD-related reviews from the `Zakia/drugscom_reviews` dataset on HuggingFace.
-- Preprocessed data to remove long reviews and HTML characters.
+- Preprocessed data to remove long reviews (>1000 characters) and HTML characters.
 - Converted reviews into `LangChain` `Document` objects and stored them for use in vector search.
 - Generated 50 evaluation questions using GPT-4o, ensuring they were grounded in the content of the reviews.
-- Used GPT-4o again to generate ground-truth answers for evaluation.
+- Used GPT-4o again to generate ground-truth answers for evaluation with all documents in the context (n=4,509 documents).
 
 ### 2. Optimize Hyperparameters
 
+- Derived a subset of 10 representative questions from the full test set for validation. Used the validation set to optimizer hyperparameters, and the full test set for final performance evaluation.
 - Compared multiple embedding models:
   - `text-embedding-3-small`
-  - `text-embedding-3-large`
+  - `text-embedding-3-large` (optimal)
   - `BioSimCSE-BioLinkBERT`
-  - BM25-style retriever (`bmretriever`)
+  - `BMRetriever`
 - Tested two FAISS similarity metrics:
   - L2 (Euclidean) distance
-  - Dot product (inner product)
+  - Dot product (inner product) (optimial)
 - Grid-searched over RAG parameters:
-  - `k`: number of retrieved documents (1–20)
-  - `temperature`: [0.1, 0.25, 0.5, 0.75, 1.0, 1.25]
-  - `top_p`: [0.25, 0.5, 0.75, 1.0]
+  - `k`: number of retrieved documents (1–20) (optimal = 15)
+  - `temperature`: [0.1, 0.25, 0.5, 0.75, 1.0, 1.25] (optimal =0.25)
+  - `top_p`: [0.25, 0.5, 0.75, 1.0] (optimal = 1.0)
 
 ### 3. Generate RAG Responses
 
 - Compared three generation settings on test data:
-  - Zero-shot GPT-3.5-turbo
-  - Zero-shot GPT-4o
+  - Zero-shot GPT-3.5-turbo (baseline)
+  - Zero-shot GPT-4o (baseline)
   - GPT-3.5-turbo with RAG using optimized settings
-- Evaluated output using ROUGE and BERTScore (F1).
+- Evaluated output using ROUGE and BERTScore (F1), selection based on BERTScore.
 
 ## Results
 
-| Model                   | BERTScore (F1) |
+| Model                  | BERTScore (F1) |
 |------------------------|----------------|
-| GPT-4o (zero-shot)     | ~0.512         |
-| GPT-3.5 (zero-shot)    | ~0.468         |
-| GPT-3.5 (RAG, optimal) | **~0.520**     |
+| GPT-4o (zero-shot)     |  0.512         |
+| GPT-3.5 (zero-shot)    |  0.488         |
+| GPT-3.5 (RAG, optimal) |  **0.501**     |
 
 - Best-performing RAG configuration:
   - Embedding: `text-embedding-3-large`
   - Similarity: Dot product
   - `k=15`, `temperature=0.25`, `top_p=1.0`
-- RAG-enhanced GPT-3.5 outperformed both zero-shot GPT-3.5 and even GPT-4o in some metrics.
+- RAG-enhanced GPT-3.5 outperformed both zero-shot GPT-3.5 and GPT-4o based on BERTScore (F1).
 
 ## Key Takeaways
 
