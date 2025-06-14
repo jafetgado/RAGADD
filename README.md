@@ -49,11 +49,6 @@ We use the `drugscom_reviews` dataset to extract and preprocess reviews related 
 | GPT-3.5 (zero-shot)    |  0.488         |
 | GPT-3.5 (RAG, optimal) |  **0.501**     |
 
-- Best-performing RAG configuration:
-  - Embedding: `text-embedding-3-large`
-  - Similarity: Dot product
-  - `k=15`, `temperature=0.25`, `top_p=1.0`
-- RAG-enhanced GPT-3.5 outperformed both zero-shot GPT-3.5 and GPT-4o based on BERTScore (F1).
 
 ## Key Takeaways
 
