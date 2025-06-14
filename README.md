@@ -58,7 +58,7 @@ We use the `drugscom_reviews` dataset to extract and preprocess reviews related 
 ## Key Takeaways
 
 - Retrieval-augmented generation significantly improves answer quality, especially when using high-quality embeddings and carefully tuned generation parameters.
-- A well-optimized GPT-3.5 RAG system can rival or outperform GPT-4o in specific QA tasks grounded in structured domain data.
+- A well-optimized GPT-3.5 RAG system can rival or outperform GPT-4o with full document access.
 
 ## Files
 
