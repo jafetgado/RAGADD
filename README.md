@@ -65,8 +65,3 @@ We use the `drugscom_reviews` dataset to extract and preprocess reviews related 
 - `01_prepare_dataset.ipynb`: Data extraction, cleaning, question/answer generation.
 - `02_optimize_hyperparameters.ipynb`: Embedding and RAG parameter optimization.
 - `03_generate_RAG_responses.ipynb`: Full test evaluation and performance comparison.
-
-## Requirements
-
-- Python 3.8+
-- `langchain`, `transformers`, `faiss`, `joblib`, `evaluate`, `bert_score`, `openai`, `matplotlib`, `pandas`
