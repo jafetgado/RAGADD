@@ -45,8 +45,8 @@ We use the `drugscom_reviews` dataset to extract and preprocess reviews related 
 
 | Model                  | BERTScore (F1) |
 |------------------------|----------------|
-| GPT-4o (zero-shot)     |  0.512         |
-| GPT-3.5 (zero-shot)    |  0.488         |
+| GPT-4o (zero-shot)     |  0.488         |
+| GPT-3.5 (zero-shot)    |  0.457         |
 | GPT-3.5 (RAG, optimal) |  **0.501**     |
 
 
