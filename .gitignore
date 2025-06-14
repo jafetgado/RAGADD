@@ -5,5 +5,5 @@
 api.env
 **/legacy
 gitpush.sh
-vectorstores/*
-!vectorstores/.gitkeep
+data/vectorstores/*
+!data/vectorstores/.gitkeep
