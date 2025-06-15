@@ -37,6 +37,7 @@ The RAG system is evaluated on its ability to generate accurate answers to 50 us
 
 ### 3. Generate RAG Responses
 
+- Implemented generation with OpenAI API with LangChain pipelines.
 - Compared three generation settings on test data:
   - Zero-shot GPT-3.5-turbo (baseline)
   - Zero-shot GPT-4o (baseline)
@@ -62,3 +63,10 @@ The RAG system is evaluated on its ability to generate accurate answers to 50 us
 - `01_prepare_dataset.ipynb`: Data extraction, cleaning, question/answer generation.
 - `02_optimize_hyperparameters.ipynb`: Embedding and RAG parameter optimization.
 - `03_generate_RAG_responses.ipynb`: Full test evaluation and performance comparison.
+
+## Example Responses
+
+**Question**:
+```
+How do ADHD medications affect gut health?
+```
