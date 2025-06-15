@@ -97,7 +97,7 @@ digestive discomfort linked to specific pill binders. Another noted that methylp
 helped regulate their digestive tract. These effects vary by medication and individual.
 ```
 
-**GPT-4o with full review access (k=4,509)**:
+**GPT-4o with full review access (`n=4,509`)**:
 ```
 Patients report several gastrointestinal side effects from ADHD medications. Some 
 individuals experienced nausea, diarrhea, constipation, and appetite loss. A few 
