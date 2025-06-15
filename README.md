@@ -73,32 +73,35 @@ How do ADHD medications affect gut health?
 
 **GPT-3.5 zero-shot (no review access)**:
 ```
-ADHD medications can sometimes cause gastrointestinal side effects such as stomach upset, nausea, 
-or decreased appetite. However, these effects are usually mild and temporary. It's important to 
-discuss any concerns about gut health with your healthcare provider when starting ADHD medication.
+ADHD medications can sometimes cause gastrointestinal side effects such as stomach
+upset, nausea, or decreased appetite. However, these effects are usually mild and
+temporary. It's important to discuss any concerns about gut health with your 
+healthcare provider when starting ADHD medication.
 ```
 
 **GPT-4o zero-shot (no review access)**:
 ```
-ADHD medications, particularly stimulants, can affect gut health by causing side effects such as
- reduced appetite, stomach pain, nausea, or constipation. These effects are usually temporary and
-  may diminish as the body adjusts to the medication. However, individual responses vary, and some
-   may experience more persistent gastrointestinal issues.
+ADHD medications, particularly stimulants, can affect gut health by causing side
+effects such as reduced appetite, stomach pain, nausea, or constipation. These 
+effects are usually temporary and may diminish as the body adjusts to the medication. 
+However, individual responses vary, and some may experience more persistent 
+gastrointestinal issues.
 ```
 
 **GPT-3.5 with RAG (`k=15`)**:
-```'Patients report several gastrointestinal side effects from ADHD medications. Some individuals
- experienced nausea, diarrhea, constipation, and appetite loss. A few also mentioned weight loss 
- associated with reduced food intake. One patient reported digestive discomfort linked to specific
-  pill binders. Another noted that methylphenidate helped regulate their digestive tract. These 
-  effects vary by medication and individual.
+```'Patients report several gastrointestinal side effects from ADHD medications. Some 
+individuals experienced nausea, diarrhea, constipation, and appetite loss. A few also 
+mentioned weight loss associated with reduced food intake. One patient reported 
+digestive discomfort linked to specific pill binders. Another noted that methylphenidate 
+helped regulate their digestive tract. These effects vary by medication and individual.
 ```
 
 **GPT-4o with full review access (k=4,509)**:
 ```
-Patients report several gastrointestinal side effects from ADHD medications. Some individuals 
-experienced nausea, diarrhea, constipation, and appetite loss. A few also mentioned weight loss 
-associated with reduced food intake. One patient reported digestive discomfort linked to specific
- pill binders. Another noted that methylphenidate helped regulate their digestive tract. These 
- effects vary by medication and individual.
+Patients report several gastrointestinal side effects from ADHD medications. Some 
+individuals experienced nausea, diarrhea, constipation, and appetite loss. A few 
+also mentioned weight loss associated with reduced food intake. One patient 
+reported digestive discomfort linked to specific pill binders. Another noted that
+methylphenidate helped regulate their digestive tract. These effects vary by 
+medication and individual.
 ```
