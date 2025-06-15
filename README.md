@@ -89,7 +89,8 @@ gastrointestinal issues.
 ```
 
 **GPT-3.5 with RAG (`k=15`)**:
-```'Patients report several gastrointestinal side effects from ADHD medications. Some 
+```
+Patients report several gastrointestinal side effects from ADHD medications. Some 
 individuals experienced nausea, diarrhea, constipation, and appetite loss. A few also 
 mentioned weight loss associated with reduced food intake. One patient reported 
 digestive discomfort linked to specific pill binders. Another noted that methylphenidate 
