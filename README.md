@@ -49,8 +49,8 @@ The RAG system is evaluated on its ability to generate accurate answers to 50 us
 | Model                  | BERTScore (F1) |
 |------------------------|----------------|
 | GPT-4o (zero-shot)     |  0.488         |
-| GPT-3.5 (zero-shot)    |  0.457         |
-| GPT-3.5 (RAG, optimal) |  **0.501**     |
+| GPT-3.5 (zero-shot)    |  0.454         |
+| GPT-3.5 (RAG, optimal) |  **0.506**     |
 
 
 ## Key Takeaways
@@ -89,11 +89,10 @@ responses vary, and some may experience more persistent gastrointestinal issues.
 
 **GPT-3.5 with RAG (`k=15`)**:
 ```
-Patients report several gastrointestinal side effects from ADHD medications. Some individuals 
-experienced nausea, diarrhea, constipation, and appetite loss. A few also mentioned weight 
-loss associated with reduced food intake. One patient reported digestive discomfort linked
-to specific pill binders. Another noted that methylphenidate helped regulate their digestive 
-tract. These effects vary by medication and individual.
+Some ADHD medications, such as Methylphenidate and Dexmethylphenidate, have been reported to
+cause side effects like diarrhea. Additionally, Strattera has been mentioned to cause 
+constipation in some individuals. These gastrointestinal effects may vary among patients 
+using these medications.
 ```
 
 **GPT-4o with full review access (`n=4,509`)**:
